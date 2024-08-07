@@ -1,0 +1,61 @@
+.imagen{
+  display: block;
+  width:1200px;
+	height:600px;
+	border-radius: 20px;
+  margin: auto;
+	
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(./imagen/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, h2 {
+  color: #0b0c0c;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  background-color:rgb(134, 133, 138) ;
+}
+
+
+#home {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#home h1 {
+  font-size: 3em;
+}
+
+#registro form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#registro button {
+  display: block;
+  width: 100%;
+}
+
+#sucursales ul, #clientes ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#sucursales li, #clientes li {
+  background-color: #e9ecef;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.table-container {
+  max-width: 65%;
+  margin: 0 auto;
+}
