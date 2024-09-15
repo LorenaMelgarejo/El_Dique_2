@@ -1,61 +1,294 @@
-.imagen{
-  display: block;
-  width:1200px;
-	height:600px;
-	border-radius: 20px;
-  margin: auto;
-	
-}
-
+/* General body styling */
 body {
-  font-family: 'Arial', sans-serif;
-  background-image: url(./imagen/fondo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  /*padding: 0;*/
 }
 
-h1, h2 {
-  color: #0b0c0c;
-}
-
+/* Navbar styling */
 .navbar {
-  margin-bottom: 20px;
-  background-color:rgb(134, 133, 138) ;
+  background-color: #333; /*#f8f9fa;*/
+  padding: 10px 20px;
+  /*position: relative;*/
 }
 
+.navbar-container {
+  display: flex; /*none*/
+  justify-content: space-between;
+  align-items: center;
+}
 
-#home {
+.navbar-toggler {
+  display: none;
+  background: none; /*agregado*/
+  font-size: 24px; /*20*/
+  border: none;
+  cursor: pointer;
+  color: white;/*agregado*/
+}
+
+/*.navbar-links {
+  display: flex;
+}*/
+
+.navbar-links ul {
+  display: flex;/*agregado*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;/*agregado*/
+}
+
+/*.navbar-links li {
+  margin: 0 15px;
+}*/
+
+.navbar-links a {
+  text-decoration: none;
+  color:white; /*#000;*/
+  font-weight: bold;
+}
+
+/* Home section styling */
+.home-section {
   text-align: center;
-  padding: 50px 0;
+  padding: 20px;
 }
 
-#home h1 {
-  font-size: 3em;
+/* Carrusel styling */
+.carousel {
+  position: relative;
+  width: 50%;
+  margin: auto;
 }
 
-#registro form {
-  max-width: 600px;
-  margin: 0 auto;
+.carousel-inner {
+  overflow: hidden;
 }
 
-#registro button {
+.carousel-item {
+  display: none;
+}
+
+.carousel-item.active {
   display: block;
+}
+
+.carousel-item img {
   width: 100%;
 }
 
-#sucursales ul, #clientes ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-#sucursales li, #clientes li {
-  background-color: #e9ecef;
-  margin-bottom: 10px;
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
 
-.table-container {
-  max-width: 65%;
-  margin: 0 auto;
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.conta
+
+.footer-text {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+/* Clase Contacto */
+
+/* Contenedor de contacto y mapa */
+.contacto-mapa-grid {
+  display: flex;
+  justify-content: center; /* Centra el contenido dentro del contenedor */
+  align-items: flex-start; /* Alinea al inicio verticalmente */
+  gap: 40px; /* Mayor espacio entre las secciones */
+  padding: 20px; /* Añade un padding alrededor del contenedor */
+}
+
+/* Estilos para la sección de contacto */
+.contacto {
+  flex: 1;
+  max-width: 400px; /* Limita el ancho máximo de la sección de contacto */
+  padding: 10px; /* Añade un padding interno */
+  margin-left: 20px; /* Añade un margen izquierdo para separarlo del borde */
+  /*border: 1px solid #ddd; /* Opcional: añade un borde suave para resaltar la sección */
+ /* border-radius: 8px; /* Redondea las esquinas */
+}
+
+/* Estilos para el mapa */
+.mapa {
+  flex: 2;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  text-align: center;
+  /*justify-content: center; /* Centra el mapa horizontalmente dentro de su contenedor */
+}
+
+/* Ajuste del iframe para centrarlo */
+.embed-responsive {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .contacto-mapa-grid {
+      flex-direction: column; /* Cambia a columnas en pantallas más pequeñas */
+      align-items: center; /* Centra ambas secciones */
+      padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+}
+
+/* Estilos para el mapa */
+.mapa {
+  flex: 2;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column; /* Asegura que el contenido se alinee en columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilos para el enlace de WhatsApp */
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: white;
+  background-color: #25D366; /* Color típico de WhatsApp */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-link:hover {
+  background-color: #20b55b; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+  .contacto-mapa-grid {
+      padding: 10px;
+      gap: 20px; /* Reduce el espacio en pantallas medianas */
+  }
+
+  .contacto, .mapa {
+      max-width: 100%; /* Asegura que ocupen todo el ancho disponible */
+      margin: 0; /* Remueve márgenes extras en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  .contacto-mapa-grid {
+      flex-direction: column; /* Cambia a disposición en columna */
+      align-items: center; /* Centra ambas secciones */
+  }
+
+  .contacto {
+      margin-bottom: 20px; /* Añade espacio entre contacto y mapa */
+  }
+  
+  .whatsapp-link {
+      width: 90%; /* Asegura que el botón no se vea demasiado grande */
+      text-align: center; /* Centra el texto dentro del botón */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links ul {
+      display: flex;
+      flex-direction: column; /* Cambia los enlaces de la navbar a columna */
+      gap: 10px; /* Añade espacio entre los enlaces */
+  }
+
+  .whatsapp-link {
+      font-size: 14px; /* Ajusta el tamaño del texto del botón */
+      padding: 8px 15px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  @media (max-width: 768px) {
+    .navbar-toggler {
+        display: block; /* Mostramos el botón hamburguesa en pantallas pequeñas */
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333; /* Color de fondo del menú */
+        width: 100%; /* El menú ocupará el ancho completo de la pantalla */
+        position: absolute; /* El menú se posicionará debajo de la navbar */
+        top: 50px; /* Ajusta esta distancia si la navbar tiene un tamaño diferente */
+        left: 0;
+        z-index: 1000; /* Aseguramos que el menú esté por encima de otros elementos */
+        /*gap: 10px;*/
+    }
+
+    .navbar-links.active {
+        display: flex; /* El menú se despliega cuando se hace clic en el botón hamburguesa */
+    }
+    .navbar-links ul {
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+  }
+
+  .navbar-links li {
+      padding: 10px 20px; /* Añadimos padding para hacerlo más usable en móviles */
+  }
+
+  .navbar-links a {
+      width: 100%;
+      display: block;
+      padding: 10px 20px;
+      text-align: left;
+      border-bottom: 1px solid #444; /* Añadimos un separador para cada enlace */
+  }
+
+}
 }
